@@ -33,7 +33,7 @@ while (i < process.argv.length) {
     process.stdout.write(usage);
     process.exit(0);
   } else if (arg === '-v' || arg === '--version') {
-    process.stdout.write('v' + require('./package').version + '\n');
+    process.stdout.write('v' + process.versions.node + '\n');
     process.exit(0);
   } else if (arg === '-e' || arg === '--eval') {
     evalScript = process.argv[i++];
